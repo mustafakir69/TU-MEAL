@@ -1,0 +1,82 @@
+[
+    {
+      "date": "2025-03-03",
+      "mealName": {
+        "corba": "Şehriye Çorbası",
+        "anaYemek": "Etli Nohut",
+        "pilav": "Pirinç Pilavı",
+        "tatli": "Yoğurt"
+      },
+      "calories": 991
+    },
+    {
+      "date": "2025-03-04",
+      "mealName": {
+        "corba": "Köylüm Çorbası",
+        "anaYemek": "Sebzeli Köfte",
+        "pilav": "Spagetti Napoliten",
+        "tatli": "Meyve"
+      },
+      "calories": 1065
+    },
+    {
+      "date": "2025-03-05",
+      "mealName": {
+        "corba": "Arabaşı Çorbası",
+        "anaYemek": "Kıymalı Bezelye",
+        "pilav": "Peynirli Erişte",
+        "tatli": "Revani"
+      },
+      "calories": 1247
+    },
+    {
+      "date": "2025-03-06",
+      "mealName": {
+        "corba": "Tarhana Çorbası",
+        "anaYemek": "Pilav Üstü Tavuk Döner",
+        "pilav": "Zeytinyağlı Pırasa",
+        "tatli": "Ayran"
+      },
+      "calories": 1199
+    },
+    {
+      "date": "2025-03-07",
+      "mealName": {
+        "corba": "Süzme Mercimek Çorbası",
+        "anaYemek": "Et Haşlama",
+        "pilav": "Bulgur Pilavı",
+        "tatli": "Mevsim Salata"
+      },
+      "calories": 1103
+    },
+    {
+      "date": "2025-03-10",
+      "mealName": {
+        "corba": "Düğün Çorbası",
+        "anaYemek": "Etli Kuru Fasulye",
+        "pilav": "Bulgur Pilavı",
+        "tatli": "Turşu"
+      },
+      "calories": 899
+    },
+    {
+      "date": "2025-03-11",
+      "mealName": {
+        "corba": "Süzme Mercimek Çorbası",
+        "anaYemek": "İzmir Köfte",
+        "pilav": "Şehriyeli Pirinç Pilavı",
+        "tatli": "Havuç Tarator"
+      },
+      "calories": 1173
+    },
+    {
+      "date": "2025-03-12",
+      "mealName": {
+        "corba": "Domates Çorbası",
+        "anaYemek": "Tavuk Kavurma",
+        "pilav": "Kısır",
+        "tatli": "Ayran"
+      },
+      "calories": 1112
+    }
+  ]
