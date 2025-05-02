@@ -23,8 +23,8 @@ const MealDetailScreen = ({ route, navigation }) => {
   const [nutritionInfo, setNutritionInfo] = useState({
     corba: { calorie: 120, protein: '4g', carb: '18g', fat: '5g' },
     anaYemek: { calorie: 450, protein: '22g', carb: '45g', fat: '18g' },
-    pilav: { calorie: 280, protein: '5g', carb: '58g', fat: '4g' },
-    tatli: { calorie: 150, protein: '3g', carb: '25g', fat: '6g' }
+    yardimci: { calorie: 280, protein: '5g', carb: '58g', fat: '4g' },
+    ekstra: { calorie: 150, protein: '3g', carb: '25g', fat: '6g' }
   });
 
   useEffect(() => {
@@ -127,8 +127,8 @@ const MealDetailScreen = ({ route, navigation }) => {
   const totalCalories = meal.calories || 
     (nutritionInfo.corba.calorie + 
      nutritionInfo.anaYemek.calorie + 
-     nutritionInfo.pilav.calorie + 
-     nutritionInfo.tatli.calorie);
+     nutritionInfo.yardimci.calorie + 
+     nutritionInfo.ekstra.calorie);
 
   return (
     <AppLayout title="Yemek Detayı" showBackButton={true}>
@@ -182,8 +182,8 @@ const MealDetailScreen = ({ route, navigation }) => {
                   <MaterialCommunityIcons name="rice" size={24} color="#795548" />
                 </View>
                 <View style={styles.mealDetails}>
-                  <Text style={styles.mealName}>{meal.mealName.pilav}</Text>
-                  <Text style={styles.mealCalories}>{nutritionInfo.pilav.calorie} kalori</Text>
+                  <Text style={styles.mealName}>{meal.mealName.yardimci}</Text>
+                  <Text style={styles.mealCalories}>{nutritionInfo.yardimci.calorie} kalori</Text>
                 </View>
               </View>
               
@@ -194,8 +194,8 @@ const MealDetailScreen = ({ route, navigation }) => {
                   <MaterialCommunityIcons name="cup" size={24} color="#E91E63" />
                 </View>
                 <View style={styles.mealDetails}>
-                  <Text style={styles.mealName}>{meal.mealName.tatli}</Text>
-                  <Text style={styles.mealCalories}>{nutritionInfo.tatli.calorie} kalori</Text>
+                  <Text style={styles.mealName}>{meal.mealName.ekstra}</Text>
+                  <Text style={styles.mealCalories}>{nutritionInfo.ekstra.calorie} kalori</Text>
                 </View>
               </View>
             </Card.Content>
@@ -215,8 +215,8 @@ const MealDetailScreen = ({ route, navigation }) => {
                 <Text style={styles.nutritionValue}>
                   {parseInt(nutritionInfo.corba.protein) + 
                    parseInt(nutritionInfo.anaYemek.protein) + 
-                   parseInt(nutritionInfo.pilav.protein) + 
-                   parseInt(nutritionInfo.tatli.protein)}g
+                   parseInt(nutritionInfo.yardimci.protein) + 
+                   parseInt(nutritionInfo.ekstra.protein)}g
                 </Text>
               </View>
               
@@ -225,8 +225,8 @@ const MealDetailScreen = ({ route, navigation }) => {
                 <Text style={styles.nutritionValue}>
                   {parseInt(nutritionInfo.corba.carb) + 
                    parseInt(nutritionInfo.anaYemek.carb) + 
-                   parseInt(nutritionInfo.pilav.carb) + 
-                   parseInt(nutritionInfo.tatli.carb)}g
+                   parseInt(nutritionInfo.yardimci.carb) + 
+                   parseInt(nutritionInfo.ekstra.carb)}g
                 </Text>
               </View>
               
@@ -235,8 +235,8 @@ const MealDetailScreen = ({ route, navigation }) => {
                 <Text style={styles.nutritionValue}>
                   {parseInt(nutritionInfo.corba.fat) + 
                    parseInt(nutritionInfo.anaYemek.fat) + 
-                   parseInt(nutritionInfo.pilav.fat) + 
-                   parseInt(nutritionInfo.tatli.fat)}g
+                   parseInt(nutritionInfo.yardimci.fat) + 
+                   parseInt(nutritionInfo.ekstra.fat)}g
                 </Text>
               </View>
             </Card.Content>

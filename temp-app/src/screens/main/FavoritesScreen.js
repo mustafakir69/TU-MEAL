@@ -48,7 +48,6 @@ const FavoritesScreen = ({ navigation }) => {
           buttons={[
             { value: 'weekly', label: 'Haftalık' },
             { value: 'monthly', label: 'Aylık' },
-            { value: 'alltime', label: 'Tüm Zamanlar' },
           ]}
           style={styles.segmentedButtons}
         />
@@ -57,7 +56,6 @@ const FavoritesScreen = ({ navigation }) => {
       <Headline style={styles.headline}>
         {timeFilter === 'weekly' && 'Bu Haftanın En Beğenilen Yemekleri'}
         {timeFilter === 'monthly' && 'Bu Ayın En Beğenilen Yemekleri'}
-        {timeFilter === 'alltime' && 'Tüm Zamanların En Beğenilen Yemekleri'}
       </Headline>
 
       {loading ? (
@@ -86,4 +84,4 @@ const FavoritesScreen = ({ navigation }) => {
   );
 };
 
-export default FavoritesScreen; 
+export default FavoritesScreen;

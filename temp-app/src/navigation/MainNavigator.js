@@ -8,6 +8,8 @@ import FavoritesScreen from '../screens/main/FavoritesScreen';
 import ProfileScreen from '../screens/main/ProfileScreen';
 import SettingsScreen from '../screens/main/SettingsScreen';
 import NotificationSettingsScreen from '../screens/main/NotificationSettingsScreen';
+import AboutAppScreen from '../screens/main/AboutAppScreen';
+import HelpSupportScreen from '../screens/main/HelpSupportScreen';
 
 const Tab = createBottomTabNavigator();
 const HomeStack = createNativeStackNavigator();
@@ -44,6 +46,14 @@ const ProfileStackNavigator = () => {
       <ProfileStack.Screen 
         name="NotificationSettings" 
         component={NotificationSettingsScreen}
+      />
+      <ProfileStack.Screen 
+        name="AboutApp" 
+        component={AboutAppScreen}
+      />
+      <ProfileStack.Screen 
+        name="HelpSupport" 
+        component={HelpSupportScreen}
       />
     </ProfileStack.Navigator>
   );

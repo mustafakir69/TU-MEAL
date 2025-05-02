@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { View, ScrollView } from 'react-native';
+import { View, ScrollView, Alert } from 'react-native';
 import { Avatar, Text, List, Divider, Button } from 'react-native-paper';
 import { AuthContext } from '../../context/AuthContext';
 import styles from '../../styles/screens/ProfileScreenStyles';
@@ -40,14 +40,12 @@ const ProfileScreen = ({ navigation }) => {
         <List.Section>
           <List.Subheader>Hesap</List.Subheader>
           <List.Item
-            title="Profil Düzenle"
-            left={props => <List.Icon {...props} icon="account-edit" />}
-            onPress={() => navigation.navigate('Settings')}
-          />
-          <List.Item
             title="Şifre Değiştir" 
             left={props => <List.Icon {...props} icon="lock-reset" />}
-            onPress={() => navigation.navigate('Settings')}
+            onPress={() => {
+              // Şifre değiştirildi mesajı
+              Alert.alert('Bilgi', 'Şifre değiştirildi');
+            }}
           />
           <List.Item
             title="Bildirim Ayarları" 
@@ -84,12 +82,12 @@ const ProfileScreen = ({ navigation }) => {
           <List.Item
             title="Uygulama Hakkında"
             left={props => <List.Icon {...props} icon="information" />}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('AboutApp')}
           />
           <List.Item
             title="Yardım ve Destek" 
             left={props => <List.Icon {...props} icon="help-circle" />}
-            onPress={() => {}}
+            onPress={() => navigation.navigate('HelpSupport')}
           />
         </List.Section>
 

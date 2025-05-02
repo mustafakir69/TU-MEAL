@@ -16,8 +16,8 @@ const MOCK_MEALS = [
     mealName: {
       corba: "Köylüm Çorba",
       anaYemek: "Etli Nohut",
-      pilav: "Pirinç Pilavı",
-      tatli: "Ayran"
+      yardimci: "Pirinç Pilavı",
+      ekstra: "Ayran"
     },
     calories: 998,
     avarageRating: 4.2,
@@ -29,8 +29,8 @@ const MOCK_MEALS = [
     mealName: {
       corba: "Ezogelin Çorbası",
       anaYemek: "Tavuk Sote",
-      pilav: "Bulgur Pilavı",
-      tatli: "Sütlaç"
+      yardimci: "Bulgur Pilavı",
+      ekstra: "Sütlaç"
     },
     calories: 1050,
     avarageRating: 4.5,
@@ -42,8 +42,8 @@ const MOCK_MEALS = [
     mealName: {
       corba: "Yayla Çorbası",
       anaYemek: "Kuru Fasulye",
-      pilav: "Pirinç Pilavı",
-      tatli: "Baklava"
+      yardimci: "Pirinç Pilavı",
+      ekstra: "Baklava"
     },
     calories: 1200,
     avarageRating: 4.8,
@@ -55,8 +55,8 @@ const MOCK_MEALS = [
     mealName: {
       corba: "Domates Çorbası",
       anaYemek: "İzmir Köfte",
-      pilav: "Şehriyeli Pirinç Pilavı",
-      tatli: "Kemalpaşa Tatlısı"
+      yardimci: "Şehriyeli Pirinç Pilavı",
+      ekstra: "Kemalpaşa Tatlısı"
     },
     calories: 1150,
     avarageRating: 4.4,
@@ -68,8 +68,8 @@ const MOCK_MEALS = [
     mealName: {
       corba: "Mercimek Çorbası",
       anaYemek: "Mantı",
-      pilav: "Bulgur Pilavı",
-      tatli: "Kadayıf"
+      yardimci: "Bulgur Pilavı",
+      ekstra: "Kadayıf"
     },
     calories: 1100,
     avarageRating: 4.7,
@@ -209,14 +209,14 @@ const HomeScreen = ({ navigation }) => {
             
             <View style={styles.mealRow}>
               <MaterialCommunityIcons name="rice" size={20} color="#795548" />
-              <Text style={styles.mealType}>Pilav/Makarna:</Text>
-              <Text style={styles.mealName}>{meal.mealName.pilav}</Text>
+              <Text style={styles.mealType}>Yardımcı:</Text>
+              <Text style={styles.mealName}>{meal.mealName.yardimci}</Text>
             </View>
             
             <View style={styles.mealRow}>
               <MaterialCommunityIcons name="cup" size={20} color="#E91E63" />
-              <Text style={styles.mealType}>Tatlı/İçecek:</Text>
-              <Text style={styles.mealName}>{meal.mealName.tatli}</Text>
+              <Text style={styles.mealType}>Ekstra:</Text>
+              <Text style={styles.mealName}>{meal.mealName.ekstra}</Text>
             </View>
             
             <Divider style={styles.divider} />

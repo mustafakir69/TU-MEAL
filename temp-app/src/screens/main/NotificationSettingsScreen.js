@@ -8,8 +8,6 @@ import AppLayout from '../../components/layout/AppLayout';
 const NotificationSettingsScreen = () => {
   const [preferences, setPreferences] = useState({
     dailyMenu: true,
-    favorites: true,
-    specialMeals: true,
   });
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -21,7 +19,9 @@ const NotificationSettingsScreen = () => {
   const loadPreferences = async () => {
     try {
       const prefs = await getNotificationPreferences();
-      setPreferences(prefs);
+      setPreferences({
+        dailyMenu: prefs.dailyMenu
+      });
     } catch (error) {
       console.error('Error loading notification preferences:', error);
     } finally {
@@ -29,10 +29,9 @@ const NotificationSettingsScreen = () => {
     }
   };
 
-  const handleToggleSwitch = (key) => {
+  const handleToggleSwitch = () => {
     setPreferences({
-      ...preferences,
-      [key]: !preferences[key],
+      dailyMenu: !preferences.dailyMenu,
     });
   };
 
@@ -72,50 +71,20 @@ const NotificationSettingsScreen = () => {
         <View style={styles.content}>
           <Headline style={styles.title}>Bildirim Ayarları</Headline>
           <Subheading style={styles.subtitle}>
-            Hangi konularda bildirim almak istediğinizi seçin
+            Bildirim tercihlerinizi ayarlayın
           </Subheading>
           
           <Divider style={styles.divider} />
           
           <List.Section>
             <List.Item
-              title="Günlük Menü Bildirimleri"
+              title="Günlük Yemek Bildirimi"
               description="Her gün yeni menü yayınlandığında bildirim alın"
               left={props => <List.Icon {...props} icon="food" />}
               right={props => 
                 <Switch
                   value={preferences.dailyMenu}
-                  onValueChange={() => handleToggleSwitch('dailyMenu')}
-                  disabled={loading}
-                />
-              }
-            />
-            
-            <Divider />
-            
-            <List.Item
-              title="Favori Yemek Bildirimleri"
-              description="Favori yemekleriniz menüde olduğunda bildirim alın"
-              left={props => <List.Icon {...props} icon="heart" />}
-              right={props => 
-                <Switch
-                  value={preferences.favorites}
-                  onValueChange={() => handleToggleSwitch('favorites')}
-                  disabled={loading}
-                />
-              }
-            />
-            
-            <Divider />
-            
-            <List.Item
-              title="Özel Menü Bildirimleri"
-              description="Özel günlerde veya kampanyalarda bildirim alın"
-              left={props => <List.Icon {...props} icon="star" />}
-              right={props => 
-                <Switch
-                  value={preferences.specialMeals}
-                  onValueChange={() => handleToggleSwitch('specialMeals')}
+                  onValueChange={handleToggleSwitch}
                   disabled={loading}
                 />
               }
